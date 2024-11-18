@@ -4,10 +4,12 @@ import MainView from "./components/MainView";
 import HistoryView from "./components/HistoryView";
 
 function App() {
+  const [view, setView] = useState('main'); //'history'
+
   return (
     <div className="container">
-      <MainView />
-      {/* <HistoryView setView={setView} /> */}
+      {view === 'main' && <mainView setView={setView}/>}
+      {view === 'history' && <HistoryView setView={setView}/>}
     </div>
   );
 }

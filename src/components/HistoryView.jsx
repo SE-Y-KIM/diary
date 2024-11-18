@@ -1,4 +1,5 @@
 import "./HistoryView.css";
+import PropTypes from 'prop-types';
 
 function HistoryView() {
   return (
@@ -20,4 +21,9 @@ function HistoryView() {
     </>
   );
 }
+
+HistoryView.propTypes = {
+  firstname: PropTypes.func,
+};
+
 export default HistoryView;
